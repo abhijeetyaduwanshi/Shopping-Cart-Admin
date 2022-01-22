@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CategoryComponent } from './components/category/category/category.component';
 import { CategoryService } from './services/categoryService/category.service';
 
 @NgModule({
@@ -10,7 +11,8 @@ import { CategoryService } from './services/categoryService/category.service';
     AppComponent
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
