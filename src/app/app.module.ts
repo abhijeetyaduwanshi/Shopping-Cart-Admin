@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CategoryService } from './services/categoryService/category.service';
 
 @NgModule({
+  bootstrap: [
+    AppComponent
+  ],
   declarations: [
     AppComponent
   ],
@@ -12,7 +16,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    CategoryService
+  ]
 })
+
 export class AppModule { }
