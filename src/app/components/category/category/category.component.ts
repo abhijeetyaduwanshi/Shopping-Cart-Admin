@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CategoryService } from './../../../services/categoryService/category.service';
+
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -8,8 +10,20 @@ import { Component, OnInit } from '@angular/core';
 
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  categoryData: any = [];
 
-  ngOnInit(): void { }
+  constructor(private categoryApi: CategoryService) { }
 
+  ngOnInit(): void {
+    this.getCategories();
+  }
+
+  /**
+   * GET all categories
+   */
+  getCategories = () => {
+    this.categoryApi.getCategories().subscribe(data => {
+      this.categoryData = data;
+    })
+  }
 }
