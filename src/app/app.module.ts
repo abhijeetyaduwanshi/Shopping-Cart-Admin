@@ -1,12 +1,13 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
+import { AngularMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CategoryComponent } from './components/category/category/category.component';
 import { CategoryService } from './services/categoryService/category.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   bootstrap: [
@@ -17,10 +18,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoryComponent
   ],
   imports: [
-    BrowserModule,
+    AngularMaterialModule,
     AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     CategoryService
