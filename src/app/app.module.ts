@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CategoryComponent } from './components/category/category/category.component';
 import { CategoryService } from './services/categoryService/category.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   bootstrap: [
@@ -18,7 +19,8 @@ import { CategoryService } from './services/categoryService/category.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     CategoryService
