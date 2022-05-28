@@ -1,30 +1,26 @@
 <div class="categoryContainer">
-    <table mat-table [dataSource]="categoryData" class="mat-elevation-z8">
+    <table mat-table [dataSource]="categoryData">
         <ng-container matColumnDef="categoryTitle">
-            <th mat-header-cell *matHeaderCellDef> Categories </th>
+            <th class="cellHeader" mat-header-cell *matHeaderCellDef> Categories </th>
             <td mat-cell *matCellDef="let element"> {{element.categoryTitle}} </td>
         </ng-container>
 
         <ng-container matColumnDef="categoryDescription">
-            <th mat-header-cell *matHeaderCellDef> Category Description </th>
+            <th class="cellHeader" mat-header-cell *matHeaderCellDef> Category Description </th>
             <td mat-cell *matCellDef="let element"> {{element.categoryDescription}} </td>
         </ng-container>
 
         <ng-container matColumnDef="editCategory">
-            <th mat-header-cell *matHeaderCellDef>
-                <!-- edit button header here -->
-            </th>
+            <th class="cellHeader" mat-header-cell *matHeaderCellDef> Options </th>
             <td mat-cell *matCellDef="let row">
-                <!-- button here -->
+                <button mat-stroked-button color="primary"> Category Options </button>
             </td>
         </ng-container>
 
         <ng-container matColumnDef="viewProducts">
-            <th mat-header-cell *matHeaderCellDef>
-                <!-- view button header here -->
-            </th>
+            <th class="cellHeader" mat-header-cell *matHeaderCellDef> Products </th>
             <td mat-cell *matCellDef="let row">
-                <!-- button here -->
+                <button mat-stroked-button color="primary"> View All Products </button>
             </td>
         </ng-container>
 
