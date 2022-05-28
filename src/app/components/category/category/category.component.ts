@@ -10,6 +10,7 @@ import { CategoryService } from './../../../services/categoryService/category.se
 
 export class CategoryComponent implements OnInit {
 
+  displayedColumns: string[] = ['categoryTitle', 'categoryDescription', 'editCategory', 'viewProducts'];
   categoryData: any = [];
 
   constructor(private categoryApi: CategoryService) { }

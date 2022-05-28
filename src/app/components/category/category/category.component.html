@@ -1,1 +1,34 @@
-<p>category works!</p>
+<div class="categoryContainer">
+    <table mat-table [dataSource]="categoryData" class="mat-elevation-z8">
+        <ng-container matColumnDef="categoryTitle">
+            <th mat-header-cell *matHeaderCellDef> Categories </th>
+            <td mat-cell *matCellDef="let element"> {{element.categoryTitle}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="categoryDescription">
+            <th mat-header-cell *matHeaderCellDef> Category Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.categoryDescription}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="editCategory">
+            <th mat-header-cell *matHeaderCellDef>
+                <!-- edit button header here -->
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <!-- button here -->
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="viewProducts">
+            <th mat-header-cell *matHeaderCellDef>
+                <!-- view button header here -->
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <!-- button here -->
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
