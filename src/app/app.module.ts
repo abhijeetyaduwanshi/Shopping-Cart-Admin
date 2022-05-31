@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CategoryComponent } from './components/category/category/category.component';
+import { CategoryComponent } from './components/category/category.component';
 import { CategoryService } from './services/categoryService/category.service';
 import { ProductComponent } from './components/product/product.component';
 
