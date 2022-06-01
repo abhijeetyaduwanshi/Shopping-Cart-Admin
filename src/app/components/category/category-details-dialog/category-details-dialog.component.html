@@ -1,6 +1,16 @@
 <div mat-dialog-content class="categoryDetailsDialogContainer">
-    <p>{{data.category.categoryTitle}}</p>
-    <p>{{data.category.categoryDescription}}</p>
-    <button mat-stroked-button color="primary">Edit</button>
-    <button mat-stroked-button color="warn">Delete</button>
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Edit category">
+            <p>{{data.category.categoryTitle}}</p>
+            <p>{{data.category.categoryDescription}}</p>
+            <button mat-stroked-button color="primary">Edit</button>
+            <button mat-stroked-button color="primary">Cancel</button>
+        </mat-tab>
+        <mat-tab class="tabHeader" label="Delete category">
+            <p>{{data.category.categoryTitle}}</p>
+            <p>{{data.category.categoryDescription}}</p>
+            <button mat-stroked-button color="warn">Delete</button>
+            <button mat-stroked-button color="primary">Cancel</button>
+        </mat-tab>
+    </mat-tab-group>
 </div>
