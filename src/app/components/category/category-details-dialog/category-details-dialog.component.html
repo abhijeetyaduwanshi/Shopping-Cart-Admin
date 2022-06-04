@@ -1,10 +1,24 @@
 <div mat-dialog-content class="categoryDetailsDialogContainer">
     <mat-tab-group mat-align-tabs="center">
         <mat-tab label="Edit category">
-            <p>{{data.category.categoryTitle}}</p>
-            <p>{{data.category.categoryDescription}}</p>
-            <button mat-stroked-button color="primary">Edit</button>
-            <button mat-stroked-button color="primary">Cancel</button>
+            <table class="editCategoryTable">
+                <tr>
+                    <mat-form-field class="editCategoryField" appearance="fill">
+                        <mat-label>Category title</mat-label>
+                        <input matInput placeholder="Ex. Pizza" value="{{data.category.categoryTitle}}">
+                    </mat-form-field>
+                </tr>
+                <tr>
+                    <mat-form-field class="editCategoryField" appearance="fill">
+                        <mat-label>Category description</mat-label>
+                        <textarea matInput placeholder="Ex. Enjoy one of our chef-inspired pizza combinations." value="{{data.category.categoryDescription}}"></textarea>
+                    </mat-form-field>
+                </tr>
+                <tr mat-dialog-actions align="center">
+                    <button mat-stroked-button mat-dialog-close color="primary">Edit</button>
+                    <button mat-stroked-button mat-dialog-close>Close</button>
+                </tr>
+            </table>
         </mat-tab>
         <mat-tab class="tabHeader" label="Delete category">
             <p>{{data.category.categoryTitle}}</p>
